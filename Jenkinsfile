@@ -12,7 +12,7 @@ pipeline{
               stage('Quality Gate Status Check'){
                   steps{
                       script{
-			      withSonarQubeEnv('sonar-durga') { 
+			      withSonarQubeEnv(installationName: 'sonar-durga') { 
 			      sh "mvn clean sonar:sonar"
                        	     	}
 			      timeout(time: 1, unit: 'HOURS') {
