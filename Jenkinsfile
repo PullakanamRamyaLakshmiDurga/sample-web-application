@@ -25,7 +25,7 @@ pipeline{
             }
                   steps{
                       script{
-                      withSonarQubeEnv('installationName: 'sonar-durga') { 
+                      withSonarQubeEnv(installationName: 'sonar-durga') { 
                       sh "mvn sonar:sonar"
                        }
                       timeout(time: 1, unit: 'HOURS') {
