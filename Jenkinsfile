@@ -63,7 +63,7 @@ pipeline{
 				     echo ${final_tag}test
 				     sed -i "s/docker_tag/$final_tag/g"  deployment.yaml
 				     '''
-				    sh'ansible-playbook ansible.yaml -i test'
+				    sh'ansible-playbook ansible.yaml -i hosts'
 				    //ansiblePlaybook installation: 'ansible', inventory: 'hosts', playbook: 'ansible.yaml'
 			
 				}
