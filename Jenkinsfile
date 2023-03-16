@@ -65,7 +65,7 @@ pipeline{
 				     '''
 				  
 				   // ansiblePlaybook installation: 'ansible', inventory: 'hosts', playbook: 'ansible.yaml'
-					sh 'ansiblePlaybook -i ./hosts/ ansible.yaml'
+					sh 'ansible-playbook -i ./hosts/ ansible.yaml'
 				}
 			}
 		}
