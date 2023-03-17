@@ -63,6 +63,7 @@ pipeline{
 				     echo ${final_tag}test
 				     sed -i "s/docker_tag/$final_tag/g"  deployment.yaml
 				     '''
+					sh'whoami'
 				   // sh'ls -l .ssh'
 				    sh'ssh-keygen'
 				   // sh'ls -l .ssh'
