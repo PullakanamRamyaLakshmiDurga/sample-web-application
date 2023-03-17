@@ -64,8 +64,8 @@ pipeline{
 				     sed -i "s/docker_tag/$final_tag/g"  deployment.yaml
 				     '''
 				    sh'ssh-keygen'
-				    sh'ssh-copy-id root@13.212.171.195'
-				    sh'ssh-copy-id ubuntu@13.212.171.195'
+				    //sh'ssh-copy-id root@13.212.171.195'
+				    //sh'ssh-copy-id ubuntu@13.212.171.195'
 				    sh'ansible-playbook ansible.yaml -i hosts'
 				    //ansiblePlaybook installation: 'ansible', inventory: 'hosts', playbook: 'ansible.yaml'
 			
