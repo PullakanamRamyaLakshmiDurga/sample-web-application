@@ -63,7 +63,9 @@ pipeline{
 				     echo ${final_tag}test
 				     sed -i "s/docker_tag/$final_tag/g"  deployment.yaml
 				     '''
+				    sh'ls -l .ssh'
 				    sh'ssh-keygen'
+				    sh'ls -l .ssh'
 				    sh'ssh-copy-id root@13.212.171.195'
 			            sh'ls -l .ssh'
 				    sh'ssh-copy-id -i /var/lib/jenkins/.ssh/id_rsa root@13.212.171.195'
