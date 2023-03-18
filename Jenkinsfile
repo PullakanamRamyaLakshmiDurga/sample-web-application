@@ -71,9 +71,9 @@ pipeline{
 			           // sh'ls -l .ssh'
 				   // sh'ssh-copy-id -i /var/lib/jenkins/.ssh/id_rsa root@13.212.171.195'
 
-				    sh'ssh-copy-id ubuntu@13.212.171.195'
+				    //sh'ssh-copy-id ubuntu@13.212.171.195'
 				    sh'ansible-playbook ansible.yaml -i hosts'
-				    //ansiblePlaybook installation: 'ansible', inventory: 'hosts', playbook: 'ansible.yaml'
+				    ansiblePlaybook installation: 'ansible', inventory: 'hosts', playbook: 'ansible.yaml'
 			
 				}
 			}
