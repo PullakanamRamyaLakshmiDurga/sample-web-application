@@ -4,7 +4,7 @@
     ansible_ssh_pass: 123456
   tasks:
     - name: Run command as durga user
-      command: mkdir dur8
+      command: mkdir dur888
     - name: copy deployment file to kubernetes master
       copy:
         src: deployment.yaml
