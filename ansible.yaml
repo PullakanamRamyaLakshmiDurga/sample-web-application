@@ -1,11 +1,15 @@
 - hosts: all
+  vars:
+    ansible_ssh_user: ubuntu
+    ansible_ssh_pass: 123456
   tasks:
-  - name: copy deployment file to kubernetes master 
-    copy:
-      src: deployment.yaml
-      dest: /home/ubuntu
-  - name: delete the previous of kubernetes objects 
-    command: kubectl delete -f /home/ubuntu/deployment.yaml
-  - name: Create a Deployment by reading the definition from a local file
-    command: kubectl apply -f /home/ubuntu/deployment.yaml
-      
+    - name: Run command as durga user
+      command: mkdir dur8
+    - name: copy deployment file to kubernetes master
+      copy:
+        src: deployment.yaml
+        dest: /home/ubuntu
+    - name: delete the previous of kubernetes objects
+      command: kubectl delete -f deployment.yaml
+    - name: Create a Deployment by reading the definition from a local file
+      command: kubectl apply -f deployment.yaml
