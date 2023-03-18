@@ -65,7 +65,7 @@ pipeline{
 				     '''
 					sh'whoami'
 				   // sh'ls -l .ssh'
-				    sh'ssh-keygen'
+				   // sh'ssh-keygen'
 				   // sh'ls -l .ssh'
 				   // sh'ssh-copy-id root@13.212.171.195'
 			           // sh'ls -l .ssh'
