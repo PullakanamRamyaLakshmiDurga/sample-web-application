@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: devops-training
+  name: devops-durga-project
 spec:
   selector:
     matchLabels:
-      app: devops-training
+      app: devops-durga-project
   template:
     metadata:
       labels:
-        app: devops-training
+        app: devops-durga-project
     spec:
       containers:
-      - name: devops-training
+      - name: devops-durga-project
         image: durgapullakanam/docker:docker_tag
         command: ["/bin/sh"]
         args: ["-c","sh /usr/local/tomcat/bin/startup.sh;while true; do echo hello; sleep 10;done"]
@@ -24,9 +24,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: devops-training-app-service
+  name: devops-durga-app-service
   labels:
-    app: devops-training
+    app: devops-durga-project
 spec:
   type: NodePort
   ports:
@@ -35,4 +35,4 @@ spec:
     protocol: TCP
     name: http
   selector:
-    app: devops-training
+    app: devops-durga-project
